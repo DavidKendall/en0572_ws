@@ -47,7 +47,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>mbed</OutputName>
+          <OutputName>uCOS-II</OutputName>
           <CreateExecutable>0</CreateExecutable>
           <CreateLib>1</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -87,7 +87,7 @@
             <nStopA1X>0</nStopA1X>
             <nStopA2X>0</nStopA2X>
           </AfterMake>
-          <SelectedForBatchBuild>1</SelectedForBatchBuild>
+          <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
         </TargetCommonOption>
         <CommonProperty>
@@ -361,7 +361,7 @@
             <wLevel>2</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>1</uC99>
+            <uC99>0</uC99>
             <useXO>0</useXO>
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
@@ -369,7 +369,7 @@
               <MiscControls></MiscControls>
               <Define>TARGET_LPC4088, TARGET_M4, TARGET_CORTEX_M, TARGET_NXP, TARGET_LPC408X, TOOLCHAIN_ARM_STD, TOOLCHAIN_ARM, __CORTEX_M4, ARM_MATH_CM4, __FPU_PRESENT=1, __MBED__=1, __ASSERT_MSG</Define>
               <Undefine></Undefine>
-              <IncludePath>.\api;.\common;.\hal;.\targets\hal\TARGET_NXP\TARGET_LPC408X;.\targets\hal\TARGET_NXP\TARGET_LPC408X\TARGET_LPC4088;.\targets\cmsis;.\targets\cmsis\TARGET_NXP\TARGET_LPC408X;.\targets\cmsis\TARGET_NXP\TARGET_LPC408X\TOOLCHAIN_ARM_STD</IncludePath>
+              <IncludePath>.\Source;.\Ports\ARM-Cortex-M4\Generic\ARM</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -390,7 +390,7 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>0</umfTarg>
+            <umfTarg>1</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -399,7 +399,7 @@
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x10000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>.\targets\cmsis\TARGET_NXP\TARGET_LPC408X\TOOLCHAIN_ARM_STD\LPC407X_8X.sct</ScatterFile>
+            <ScatterFile></ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -413,269 +413,74 @@
           <GroupName>src</GroupName>
           <Files>
             <File>
-              <FileName>assert.c</FileName>
+              <FileName>os_core.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\common\assert.c</FilePath>
+              <FilePath>.\Source\os_core.c</FilePath>
             </File>
             <File>
-              <FileName>error.c</FileName>
+              <FileName>os_flag.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\common\error.c</FilePath>
+              <FilePath>.\Source\os_flag.c</FilePath>
             </File>
             <File>
-              <FileName>gpio.c</FileName>
+              <FileName>os_mbox.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\common\gpio.c</FilePath>
+              <FilePath>.\Source\os_mbox.c</FilePath>
             </File>
             <File>
-              <FileName>lp_ticker_api.c</FileName>
+              <FileName>os_mem.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\common\lp_ticker_api.c</FilePath>
+              <FilePath>.\Source\os_mem.c</FilePath>
             </File>
             <File>
-              <FileName>mbed_interface.c</FileName>
+              <FileName>os_mutex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\common\mbed_interface.c</FilePath>
+              <FilePath>.\Source\os_mutex.c</FilePath>
             </File>
             <File>
-              <FileName>pinmap_common.c</FileName>
+              <FileName>os_q.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\common\pinmap_common.c</FilePath>
+              <FilePath>.\Source\os_q.c</FilePath>
             </File>
             <File>
-              <FileName>rtc_time.c</FileName>
+              <FileName>os_sem.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\common\rtc_time.c</FilePath>
+              <FilePath>.\Source\os_sem.c</FilePath>
             </File>
             <File>
-              <FileName>semihost_api.c</FileName>
+              <FileName>os_task.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\common\semihost_api.c</FilePath>
+              <FilePath>.\Source\os_task.c</FilePath>
             </File>
             <File>
-              <FileName>ticker_api.c</FileName>
+              <FileName>os_time.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\common\ticker_api.c</FilePath>
+              <FilePath>.\Source\os_time.c</FilePath>
             </File>
             <File>
-              <FileName>us_ticker_api.c</FileName>
+              <FileName>os_tmr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\common\us_ticker_api.c</FilePath>
+              <FilePath>.\Source\os_tmr.c</FilePath>
             </File>
             <File>
-              <FileName>wait_api.c</FileName>
+              <FileName>os_cpu_a.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Ports\ARM-Cortex-M4\Generic\ARM\os_cpu_a.asm</FilePath>
+            </File>
+            <File>
+              <FileName>os_cpu_c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\common\wait_api.c</FilePath>
+              <FilePath>.\Ports\ARM-Cortex-M4\Generic\ARM\os_cpu_c.c</FilePath>
             </File>
             <File>
-              <FileName>BusIn.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\BusIn.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>BusInOut.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\BusInOut.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>BusOut.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\BusOut.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>CallChain.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\CallChain.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>CAN.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\CAN.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Ethernet.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\Ethernet.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>FileBase.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\FileBase.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>FileLike.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\FileLike.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>FilePath.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\FilePath.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>FileSystemLike.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\FileSystemLike.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>I2C.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\I2C.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>I2CSlave.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\I2CSlave.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>InterruptIn.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\InterruptIn.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>InterruptManager.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\InterruptManager.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>LocalFileSystem.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\LocalFileSystem.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>RawSerial.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\RawSerial.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Serial.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\Serial.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>SerialBase.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\SerialBase.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>SPI.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\SPI.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>SPISlave.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\SPISlave.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Stream.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\Stream.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Ticker.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\Ticker.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Timeout.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\Timeout.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Timer.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\Timer.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>TimerEvent.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\TimerEvent.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>analogout_api.c</FileName>
+              <FileName>os_dbg.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\targets\hal\TARGET_NXP\TARGET_LPC408X\analogout_api.c</FilePath>
+              <FilePath>.\Ports\ARM-Cortex-M4\Generic\ARM\os_dbg.c</FilePath>
             </File>
             <File>
-              <FileName>gpio_api.c</FileName>
+              <FileName>os_hooks.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\targets\hal\TARGET_NXP\TARGET_LPC408X\gpio_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>gpio_irq_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\targets\hal\TARGET_NXP\TARGET_LPC408X\gpio_irq_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>pinmap.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\targets\hal\TARGET_NXP\TARGET_LPC408X\pinmap.c</FilePath>
-            </File>
-            <File>
-              <FileName>port_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\targets\hal\TARGET_NXP\TARGET_LPC408X\port_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>rtc_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\targets\hal\TARGET_NXP\TARGET_LPC408X\rtc_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>sleep.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\targets\hal\TARGET_NXP\TARGET_LPC408X\sleep.c</FilePath>
-            </File>
-            <File>
-              <FileName>us_ticker.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\targets\hal\TARGET_NXP\TARGET_LPC408X\us_ticker.c</FilePath>
-            </File>
-            <File>
-              <FileName>analogin_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\targets\hal\TARGET_NXP\TARGET_LPC408X\TARGET_LPC4088\analogin_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>can_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\targets\hal\TARGET_NXP\TARGET_LPC408X\TARGET_LPC4088\can_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>ethernet_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\targets\hal\TARGET_NXP\TARGET_LPC408X\TARGET_LPC4088\ethernet_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>i2c_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\targets\hal\TARGET_NXP\TARGET_LPC408X\TARGET_LPC4088\i2c_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>pwmout_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\targets\hal\TARGET_NXP\TARGET_LPC408X\TARGET_LPC4088\pwmout_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>serial_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\targets\hal\TARGET_NXP\TARGET_LPC408X\TARGET_LPC4088\serial_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>spi_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\targets\hal\TARGET_NXP\TARGET_LPC408X\TARGET_LPC4088\spi_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>board.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\common\board.c</FilePath>
-            </File>
-            <File>
-              <FileName>retarget.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\common\retarget.cpp</FilePath>
+              <FilePath>.\Source\os_hooks.c</FilePath>
             </File>
           </Files>
         </Group>

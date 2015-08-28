@@ -16,4 +16,8 @@
     <PathAndName>.\ebb\ebb.uvprojx</PathAndName>
   </project>
 
+  <project>
+    <PathAndName>.\uCOS-II\uCOS-II.uvprojx</PathAndName>
+  </project>
+
 </ProjectWorkspace>
