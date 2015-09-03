@@ -8,12 +8,31 @@
   <WorkspaceName>WorkSpace</WorkspaceName>
 
   <project>
-    <PathAndName>.\mbed_nxp_lpc408x\mbed.uvprojx</PathAndName>
+    <PathAndName>.\mbed_example\mbed_example.uvprojx</PathAndName>
+    <NodeIsExpanded>1</NodeIsExpanded>
+  </project>
+
+  <project>
+    <PathAndName>.\mbed_uCOS-II_example\mbed_uCOS-II_example.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\mbed_bubbles\mbed_bubbles.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\mbed_gfx_ea_de_4-3\mbed_gfx_ea_de_4-3.uvprojx</PathAndName>
     <NodeIsActive>1</NodeIsActive>
+    <NodeIsExpanded>1</NodeIsExpanded>
+  </project>
+
+  <project>
+    <PathAndName>.\mbed_nxp_lpc408x\mbed.uvprojx</PathAndName>
   </project>
 
   <project>
     <PathAndName>.\ebb\ebb.uvprojx</PathAndName>
+    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>
