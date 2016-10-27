@@ -22,17 +22,16 @@
 
   <project>
     <PathAndName>.\mbed_gfx_ea_de_4-3\mbed_gfx_ea_de_4-3.uvprojx</PathAndName>
-    <NodeIsActive>1</NodeIsActive>
     <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>
     <PathAndName>.\mbed_nxp_lpc408x\mbed.uvprojx</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
   </project>
 
   <project>
     <PathAndName>.\ebb\ebb.uvprojx</PathAndName>
-    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>
