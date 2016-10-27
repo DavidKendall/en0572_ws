@@ -25,7 +25,6 @@ LR_IROM2 0x28000000 0x01000000  {
   ER_IROM2 0x28000000 0x01000000  {  ; load address = execution address
     .ANY1 (+RO-DATA)                 ; all DATA not fitting in IFLASH
     .ANY (SPIFI_MEM)                 ; DATA tagged as SPIFI_MEM
-    *.o (SPIFI_MEM)                  ; CODE tagged as SPIFI_MEM
   }
 }
 
